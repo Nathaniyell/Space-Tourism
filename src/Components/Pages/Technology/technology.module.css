@@ -53,16 +53,20 @@
   margin: 0 auto;
 }
 .right {
-  width: 45%;
+  width: 55%;
   height: 100%;
   color: #fff;
   text-align: left;
+  display: flex;
 }
 .right nav {
   display: flex;
   justify-content: space-between;
+  flex-direction: column;
   align-items: center;
   width: 50%;
+  height: 90%;
+  margin: auto;
   font-family: "Barlow Condensed", sans-serif;
 }
 .buttons {
@@ -96,7 +100,7 @@ background-color: #d0d6f9;
 }
 
 .text {
-  margin: 20px 0 50px;
+  margin: 20px 0 0 30px;
   height: 70%;
   display: flex;
   flex-direction: column;
@@ -130,5 +134,5 @@ background-color: #d0d6f9;
   font-family: "Barlow", sans-serif;
   color: #d0d6f9;
   line-height: 1.5;
-  width: 85%;
+  width: 80%;
 }

@@ -40,12 +40,6 @@ const TechnologyItems = () => {
             </div>
           </div>
           <aside className={technologyStyles.right}>
-            <div className={technologyStyles.text}>
-              <p className={technologyStyles.terminology}>The Terminology...</p>
-              <h1>{name}</h1>
-              <p className={technologyStyles.description}>{description}</p>
-              <p></p>
-            </div>
             <nav>
               {technology.map((item, index) => {
                 return (
@@ -62,6 +56,12 @@ const TechnologyItems = () => {
                 );
               })}
             </nav>
+            <div className={technologyStyles.text}>
+              <p className={technologyStyles.terminology}>The Terminology...</p>
+              <h1>{name}</h1>
+              <p className={technologyStyles.description}>{description}</p>
+              <p></p>
+            </div>
           </aside>
         </main>
       )}
