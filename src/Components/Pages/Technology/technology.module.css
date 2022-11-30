@@ -136,3 +136,19 @@ background-color: #d0d6f9;
   line-height: 1.5;
   width: 80%;
 }
+
+@media(max-width: 768px){
+  .container{
+            background-image: url(../../assets/technology/background-technology-tablet.jpg);
+           
+  }
+ 
+}
+@media(max-width: 568px){
+  .container{
+            background-image: url(../../assets/technology/background-technology-mobile.jpg);
+  }
+  section{
+      
+  }
+}
