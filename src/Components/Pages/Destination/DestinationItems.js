@@ -29,7 +29,7 @@ const DestinationItems = () => {
                       type="button"
                       onClick={() => setValue(index)}
                       className={styles.btn}
-                      key={index}
+                      key={value}
                     >
                       {item.name}
                     </button>

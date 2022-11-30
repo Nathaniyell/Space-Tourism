@@ -27,8 +27,7 @@ section{
 
 }
 .text{
-    /* background-color: green; */
-    width: 32%;
+    width: 40%;
     line-height: 1.4;
     text-align: center;
 }
@@ -63,10 +62,20 @@ section{
 
 @media(max-width: 768px){
     main{
-              background-image: url(../../assets/home/background-home-desktop.jpg);
+              background-image: url(../../assets/home/background-home-tablet.jpg);
+             
     }
     section{
         flex-direction: column;
+        top: 50%;
+    }
+    .text{
+        width: 50%;
+        margin: 0 auto;
+        
+    }
+    .explore{
+        margin: 40px auto 0;
     }
 }
 @media(max-width: 568px){
