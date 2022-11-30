@@ -2,14 +2,25 @@ import React, { useState } from "react";
 import Wrapper from "../../Wrapper";
 import styles from "./destination.module.css";
 import data from "../../data.json";
+import pics0 from '../../assets/destination/image-moon.png'
+import pics1 from '../../assets/destination/image-mars.png'
+import pics2 from '../../assets/destination/image-europa.png'
+import pics3 from '../../assets/destination/image-titan.png'
 
 const destination = data.destinations;
+const planetImgs = [pics0, pics1, pics2, pics3]
 const DestinationItems = () => {
+  const [pictures, setPictures] = useState(pics0)
   const [planets] = useState(destination);
   const [value, setValue] = useState(0);
 
-  const { name, images, description, distance, travel } = planets[value];
+  const { name, description, distance, travel } = planets[value];
   //destructure the planets array and pick out these properties from each index as specified in planets[value]
+
+  function myFunction(index){
+    setValue(index)
+    setPictures(planetImgs[index])
+  }
 
   return (
     <Wrapper>
@@ -17,7 +28,8 @@ const DestinationItems = () => {
         <main className={styles.main}>
           <div className={styles.left}>
             <div className={styles.image}>
-              <img src={images.png} alt={name} width="100%" />
+               <img src={pictures} alt={name} width="100%" />
+              
             </div>
           </div>
           <aside className={styles.right}>
@@ -27,9 +39,9 @@ const DestinationItems = () => {
                   <div className={styles.buttons}>
                     <button
                       type="button"
-                      onClick={() => setValue(index)}
+                      onClick={() => myFunction(index)}
                       className={styles.btn}
-                      key={value}
+                      key={index}
                     >
                       {item.name}
                     </button>
