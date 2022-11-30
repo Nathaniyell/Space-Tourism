@@ -17,7 +17,7 @@ const DestinationItems = () => {
   const { name, description, distance, travel } = planets[value];
   //destructure the planets array and pick out these properties from each index as specified in planets[value]
 
-  function myFunction(index){
+  function changePictureHandler(index){
     setValue(index)
     setPictures(planetImgs[index])
   }
@@ -39,7 +39,7 @@ const DestinationItems = () => {
                   <div className={styles.buttons}>
                     <button
                       type="button"
-                      onClick={() => myFunction(index)}
+                      onClick={() => changePictureHandler(index)}
                       className={styles.btn}
                       key={index}
                     >
