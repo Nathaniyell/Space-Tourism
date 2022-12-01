@@ -5,7 +5,6 @@
 }
 
 .navDesktop {
-    /* background-color: yellow; */
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -16,8 +15,7 @@
     font-family: 'Barlow Condensed', sans-serif;
     z-index: 4;
 }
-
-ul {
+.desktop {
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -27,8 +25,34 @@ ul {
     background-color: rgba(255, 255, 255, 0.04);
     backdrop-filter: blur(40.7742px);
 }
-
-
+.navMobile{
+    display: none;
+    justify-content: space-around;
+    flex-direction: column;
+    position: absolute;
+    top: 100px;
+    left: 0;
+    height: 350px;
+    padding-bottom: 10px;
+    width: 80%;
+    background-color: rgb(10, 18, 53);
+    backdrop-filter: blur(40.7742px);
+    /* transform: translateX(-100%); */
+    transition: all .4s linear;
+}
+.navMobile .navItems {
+    font-size: 1.5rem;
+    text-align: left;
+}
+.button{
+    font-size: 2.5rem;
+    background: transparent;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding-right: 10px;
+    display: none;
+}
 .navItems {
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -39,12 +63,12 @@ ul {
     place-items: center;
     align-self: center;
     transition: all 0.5s ease-in-out;
-
 }
 
 .navItems:hover {
     color: rgb(255, 243, 211);
     border-bottom: 2px solid rgb(255, 243, 211);
+    letter-spacing: 4px;
 }
 .navItems:active,
 .navItems:focus{
@@ -56,7 +80,21 @@ ul {
     .navDesktop{
         padding: 20px 0 20px 15px;
     }
-    ul{
+    .desktop{
         width: 70%;
     }
+}
+@media (max-width: 568px){
+    .desktop{
+        display: none;
+    }
+    .navMobile{
+        display: flex;
+    }
+   .button{
+    display: block;
+   }
+   .showNav{
+       transform: translateX(0);
+   }
 }
