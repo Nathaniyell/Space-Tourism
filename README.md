@@ -8,5 +8,5 @@ The different pages has various tabs which when clicked displays dynamic data ba
 
 The data on the different pages was gotten from a json file as contained in the reppo.
 
-To view the live page, clicke here ...
+To view the live page, clicke <a href='https://Nathaniyell.github.io/Space-Tourism'>Here</a>
 
