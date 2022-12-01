@@ -31,6 +31,7 @@ section {
     align-items: center;
     width: 100%;
     justify-content: space-around;
+    overflow: hidden;
 }
 
 .text {
@@ -82,7 +83,7 @@ section {
     }
 
     .text {
-        width: 50%;
+        width: 60%;
         margin: 0 auto;
 
     }
@@ -97,5 +98,16 @@ section {
         background-image: url(../../assets/home/background-home-mobile.jpg);
     }
 
-    section {}
+    .text {
+        width: 90%;
+    }
+
+    .text h1 {
+        font-size: 6rem;
+        margin-block: 30px;
+    }
+
+    .text p {
+        font-size: 1.3rem;
+    }
 }

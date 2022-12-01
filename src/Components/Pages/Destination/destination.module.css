@@ -89,10 +89,11 @@
   font-family: "Barlow Condensed";
   font-style: normal;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 19px;
   letter-spacing: 2.7px;
   color: #d0d6f9;
+  padding: 10px;
 
 }
 
@@ -103,7 +104,6 @@
 
 .text {
   margin: 20px 0;
-
 }
 
 .text h1 {
@@ -196,5 +196,28 @@
     background-image: url(../../assets/destination/background-destination-mobile.jpg);
   }
 
-  section {}
+  .right {
+    width: 90%;
+  }
+
+  .container h3 {
+    top: 18%;
+    left: unset;
+    text-align: center;
+    width: 100%;
+  }
+
+  .image {
+    margin-block: 30px;
+  }
+
+  .btn {
+    font-size: 1.5rem;
+
+  }
+
+  .text h1 {
+    font-size: 5rem;
+  }
+
 }
