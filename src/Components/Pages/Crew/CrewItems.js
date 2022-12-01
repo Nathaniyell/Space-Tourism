@@ -25,6 +25,7 @@ const CrewItems = () => {
   return (
     <Wrapper>
       {crew.length > 0 && (
+        <div className={crewStyles.centralize}>
         <main className={crewStyles.body}>
           <div className={crewStyles.left}>
             <div className={crewStyles.image}>
@@ -55,6 +56,7 @@ const CrewItems = () => {
             </nav>
           </aside>
         </main>
+        </div>
       )}
     </Wrapper>
   );

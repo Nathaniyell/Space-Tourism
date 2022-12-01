@@ -25,7 +25,8 @@ const DestinationItems = () => {
   return (
     <Wrapper>
       {destination.length > 0 && (
-        <main className={styles.main}>
+        <div className={styles.centralize}>
+        <main className={styles.wrapper}>
           <div className={styles.left}>
             <div className={styles.image}>
                <img src={pictures} alt={name} width="100%" />
@@ -65,6 +66,7 @@ const DestinationItems = () => {
             </div>
           </aside>
         </main>
+        </div>
       )}
     </Wrapper>
   );

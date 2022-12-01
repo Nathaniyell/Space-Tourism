@@ -7,8 +7,10 @@
 .container {
   background-image: url(../../assets/technology/background-technology-desktop.jpg);
   width: 100%;
-  height: 100vh;
+  height: calc(100vh + 1px);
+  overflow: hidden;
 }
+
 .container h3 {
   font-family: "Barlow Condensed", sans-serif;
   text-transform: uppercase;
@@ -33,42 +35,52 @@
   font-family: "Barlow Condensed", sans-serif;
 }
 
-.body {
-  width: 90%;
-  height: 60%;
-  position: absolute;
-  top: 60%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.centralize {
   display: flex;
-  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 120vh;
+  overflow-y: hidden;
+}
+
+.body {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
   flex-direction: row-reverse;
   align-items: center;
- }
+}
 
 .image {
   display: grid;
   place-items: center;
-  width: 300px;
+  width: 70%;
   margin: 0 auto;
 }
+
 .right {
-  width: 55%;
+  width: 50%;
   height: 100%;
   color: #fff;
   text-align: left;
   display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
+
 .right nav {
   display: flex;
   justify-content: space-between;
-  flex-direction: column;
   align-items: center;
+  flex-direction: column;
   width: 50%;
   height: 90%;
-  margin: auto;
+  margin-left: 40px;
   font-family: "Barlow Condensed", sans-serif;
 }
+
 .buttons {
   display: flex;
   justify-content: space-between;
@@ -77,6 +89,7 @@
   margin: 0.5rem auto;
   text-align: center;
 }
+
 .btn {
   cursor: pointer;
   background-color: transparent;
@@ -93,10 +106,11 @@
   border: 1px solid #d0d6f9;
   background-color: transparent;
 }
+
 .btn:focus,
 .btn:active {
-color: #000;
-background-color: #d0d6f9;
+  color: #000;
+  background-color: #d0d6f9;
 }
 
 .text {
@@ -106,6 +120,7 @@ background-color: #d0d6f9;
   flex-direction: column;
   justify-content: space-between;
 }
+
 .text .terminology {
   font-family: "Barlow Condensed";
   font-weight: 400;
@@ -114,6 +129,7 @@ background-color: #d0d6f9;
   letter-spacing: 2.7px;
   color: #d0d6f9;
 }
+
 .text .description {
   font-size: 1.125rem;
   font-family: "Barlow", sans-serif;
@@ -121,6 +137,7 @@ background-color: #d0d6f9;
   line-height: 32px;
   color: #d0d6f9;
 }
+
 .text h1 {
   font-size: 3.5rem;
   text-align: left;
@@ -129,26 +146,81 @@ background-color: #d0d6f9;
   font-weight: 400;
   line-height: 64px;
 }
+
 .text p {
   font-size: 1.125rem;
   font-family: "Barlow", sans-serif;
   color: #d0d6f9;
   line-height: 1.5;
-  width: 80%;
+  width: 100%;
 }
 
-@media(max-width: 768px){
-  .container{
-            background-image: url(../../assets/technology/background-technology-tablet.jpg);
-           
+@media(max-width: 1007px) {
+  .right nav {
+    height: 45%;
+    align-self: center;
   }
- 
+
+  .text h1 {
+    font-size: 2.8rem;
+  }
 }
-@media(max-width: 568px){
-  .container{
-            background-image: url(../../assets/technology/background-technology-mobile.jpg);
+
+@media(max-width: 768px) {
+  .container {
+    background-image: url(../../assets/technology/background-technology-tablet.jpg);
+    overflow: visible;
+
   }
-  section{
-      
+  .centralize{
+    height: 100%;
   }
+
+  .body {
+    flex-direction: column;
+    justify-content: space-between;
+    height: 50%;
+  }
+
+  .image {
+    margin: auto;
+    width: 90%;
+  }
+
+  .right {
+    width: 90%;
+    text-align: center;
+    flex-direction: column;
+  }
+
+  .right nav {
+    flex-direction: row;
+    width: 70%;
+  }
+
+  .text {
+    height: 100%;
+  }
+
+  .text h1 {
+    text-align: center;
+    font-size: 3.5rem;
+  }
+
+  .text p {
+    width: 100%;
+  }
+
+  .buttons {
+    width: unset;
+  }
+
+}
+
+@media(max-width: 568px) {
+  .container {
+    /* background-image: url(../../assets/technology/background-technology-mobile.jpg); */
+  }
+
+  section {}
 }

@@ -30,11 +30,12 @@ const TechnologyItems = () => {
   return (
     <Wrapper>
       {technology.length > 0 && (
+        <div className={technologyStyles.centralize}>
         <main className={technologyStyles.body}>
           <div className={technologyStyles.left}>
             <div className={technologyStyles.image}>
               <picture>
-                <source media="(min-width: 768px)" srcSet={portrait} />
+                <source media="(min-width: 769px)" srcSet={portrait} />
               <img src={landscape} alt={name} width="100%" />
               </picture>
             </div>
@@ -64,6 +65,7 @@ const TechnologyItems = () => {
             </div>
           </aside>
         </main>
+        </div>
       )}
     </Wrapper>
   );

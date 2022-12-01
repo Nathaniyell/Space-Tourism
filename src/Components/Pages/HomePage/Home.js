@@ -8,6 +8,7 @@ const Home = () => {
   return (
     <Wrapper >
         <main className={styles.main}>
+          <div className={styles.centralize}>
           <section>
           <div className={styles.text}>
             <header>So, you want to travel to</header>
@@ -20,6 +21,8 @@ const Home = () => {
             </Link>
           </div>
         </section>
+          </div>
+         
       </main>
     </Wrapper>
   )
